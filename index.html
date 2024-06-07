@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home" aria-current="page">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" tabindex="0">
+            <div class="box">
+                <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+                <h1>Welcome to My Portfolio</h1>
+                <p>This is a brief introduction about myself.</p>
+            </div>
+        </section>
+        <section id="about" tabindex="0">
+            <div class="box">
+                <h2>About Me</h2>
+                <p>Details about my background and skills.</p>
+            </div>
+        </section>
+        <section id="projects" tabindex="0">
+            <div class="box">
+                <h2>Projects</h2>
+                <div class="project" tabindex="0" role="button" aria-expanded="false" aria-controls="project1-desc">
+                    <h3>Project 1</h3>
+                </div>
+                <div class="project" tabindex="0" role="button" aria-expanded="false" aria-controls="project2-desc">
+                    <h3>Project 2</h3>
+                </div>
+            </div>
+        </section>
+        <section id="contact" tabindex="0">
+            <div class="box">
+                <h2>Contact Me</h2>
+                <form aria-label="Contact Form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Portfolio</p>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="modal-title">Project Description</h2>
+            <p id="modal-description"></p>
+            <button id="close-modal" aria-label="Close Modal">Close</button>
+        </div>
+    </div>
+</body>
+
+</html>
